@@ -1,0 +1,305 @@
+    <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Multi Level Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="bootstrap-3/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="bootstrap-3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="MultiLevelCSS.css" rel="stylesheet" type="text/css"/> 
+        <script src="MultiLevelForm_js.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#this-example2">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>          
+                </button>
+                <a href="#" class="navbar-brand">Logo</a>
+            </div>
+            <div class="navbar-collapse collapse" id="this-example2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href=#>Nav Here</a></li>
+                    <li><a href="#">Nav Here</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nav Here<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="divider" role="separator"><a href="#"></a></li>
+                            <li class="dropdown-header"></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li class="dropdown-header"></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li class="divider" role="separator"></li>
+                            <li class="dropdown-header"></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<!--         <marquee> <button type="button" data-toggle="modal" class="btn btn-success btnl_info" data-target="#btnl_modal">Click to go to the form</button></marquee>-->
+         <div class="modal fade in" id="myModal" role="dialog" data-keyword="false" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <h4> Directorate for Personnel and Records Management</h4>
+                            <h5> Recruitment and Selection Division</h5>
+                        </div>
+                    </div>                
+                    <div class="modal-body">
+                        Welcome to the registration page of the...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-primary">Continue</button>
+                    </div>  
+                </div>
+            </div>
+         </div>
+        
+        <div id="MainBody" class="container-fluid">
+            <!-- Nav Guide -->
+            <div id="NavGuide" class="col-md-3">
+                <div id="NavGuide_StepOne" onclick="NavGuide_One()">
+                    <h3>STEP 1</h3>
+                    <h4>Personal Information</h4>
+                    </div> 
+                <div class="nav" id="NavGuide_StepTwo" onclick="NavGuide_Two()">
+                    <h3>STEP 2</h3>
+                    <h4>Educational Information</h4>
+                    </div>
+                <div class="nav" id="NavGuide_StepThree" onclick="NavGuide_Three()">
+                    <h3>STEP 3</h3>
+                    <h4>Previous Employment</h4>
+                    </div>
+                <div class="nav" id="NavGuide_StepFour" onclick="NavGuide_Four()">
+                    <h3>STEP 4</h3>
+                    <h4>Character Reference</h4>
+                    </div>
+                <div class="nav" id="NavGuide_StepFive" onclick="NavGuide_Five()">
+                    <h3>STEP 5</h3>
+                    <h4>Character Reference</h4>
+                </div>
+            </div>
+            <!-- Div Content-->
+            <div id="DivContent" class="col-md-6">
+                <form>
+                    <!-- Personal Information-->
+                    <div class="regFormSteps" id="stepOne">
+                        <h2>STEP I-PERSONAL INFORMATION</h2>
+                        <label class="control-label" for="lName">Last Name</label>
+                        <input type="text" data-toggle="tooltip" title="" data-original-title="Last Name" data-trigger="focus" class="form-control"  name="lastName" id="lName" placeholder="">
+
+                        <label class="control-label" for="fName">First Name</label>
+                        <input type="text" class="form-control" name="firstName" id="fName" data-toggle="tooltip" title="" data-original-title="First Name" data-trigger="focus">
+                        <label class="control-label" for="mName">Middle Name</label>
+                        <input type="text" class="form-control" name="middleName" id="mName" data-toggle="tooltip" title="" data-original-title="Middle Name">
+
+                        <label class="control-label" for="qlfr">QLFR</label>
+                        <input type="text" data-toggle="tooltip" title="" data-original-title="Qualification" class="form-control" name="firstName" id="qlfr">
+
+                        <label class="control-label" for="MailAdd">Mailing Address</label>
+                        <textarea rows="2" cols="20" id="MailAdd" class="form-control" data-toggle="tooltip" title="" data-original-title="House No, Street, Town, Province, City"></textarea>
+
+                        <label class="control-label" for="zipCode">Zip Code</label>
+                            <input type="number" class="form-control" name="ZipCode" id="zipCode" placeholder="" data-toggle="tooltip" title="" data-original-title="Zip Code">
+
+                        <label class="control-label" for="ContactNo">Contact No</label>
+                            <input type="text" class="form-control" name="contact" id="ContactNo" placeholder="" data-toggle="tooltip" title="" data-original-title="Landline & Mobile">                  
+
+                        <label class="control-label" for="email">E-mail Address</label>
+                        <input class="form-control" type="eMail" name="email" id="email"  data-toggle="tooltip" title="" data-original-title="email address">
+
+                        <label class="control-label" for="DateofBirth">Date of Birth</label>
+                        <input type="date" class="form-control" name="DoB" id="DateofBirth" data-toggle="tooltip" title="" data-original-title="Date of Birth(MM/DD/YY)">
+
+                        <label class="control-label" for="age">Age</label>
+                        <input type="number" class="form-control" name="Age" id="age" placeholder="" data-toggle="tooltip" title="" data-original-title="Age(No)">
+
+                        <label class="control-label" for="placeofBirth">Place of Birth</label>
+                            <input type="text" class="form-control" name="placeofbirth" id="placeofBirth" placeholder="" data-toggle="tooltip" title="" data-original-title="City, Town, Province">
+
+                        <label class="control-label" for="weight">Weight(in meters)</label>
+                        <input type="number" class="form-control" name="Weight" id="weight" placeholder="" data-toggle="tooltip" title="" data-original-title="Weight">
+
+                        <label class="control-label" for="weight">Height(in meters)</label>
+                        <input type="number" class="form-control" name="Height" id="height" placeholder="" data-toggle="tooltip" title="" data-original-title="Height">
+                        <label class="control-label" for="m">Gender: </label>
+                        <input type="radio" name="genderSelect" id="m" value="Male">Male
+                        
+                        <input type="radio" name="genderSelect" id="f" value="Female">Female
+                        <label class="control-label">Civil Status</label>
+
+                            <input type="radio" name="civilStatus" id="Single" value="s">Single
+                        <!--<label class="control-label">SINGLE</label>-->
+                     
+                        <input type="radio" name="civilStatus" id="Married" value="m" >Married 
+                        <!--<label class="control-label">MARRIED</label>-->
+                       
+                        <input type="radio" name="civilStatus" id="widower" value="w" >Widower
+<!--                        <label class="control-label">WIDOWER</label>-->
+                            
+                        <input type="radio" name="civilStatus" id="separated" value="sep" >Separated 
+                        <!--<label class="control-label">SEPARATED</label>-->
+                        <button type="button" onclick="next_stepTwo()" class="btn btn-primary btn-lg glyphicon glyphicon-chevron-right btnl_right" data-toggle="tooltip" title="" data-original-title="Next-Step II"></button>
+                        <button type="button" onclick="save_StepOne()" class="btn btn-primary btn-lg btnl_center" data-toggle="tooltip" title="" data-original-title="Save">Save and Continue Later</button>
+                    </div>
+                    <!-- Educational Information-->
+                    <div class="regFormSteps" id="stepTwo">            
+                        <h2> PART II-EDUCATIONAL INFORMATION</h2>
+
+                        <div>
+                            <h3 class="qlfr"><span>Primary</span></h3>
+                            <label class="control-label" for="PryEdu">Course Completed</label>
+                                <input type="text" class="form-control" name="primary" id="PryEdu" placeholder="" data-toggle="tooltip" title="" data-original-title="Primary Course Completed">
+                            <label class="control-label" for="PryDateGrad">Date Graduated(MM/DD/YY)</label>
+                                <input type="text" class="form-control" name="primary" id="PryDateGrad" placeholder="" data-toggle="tooltip" title="" data-original-title="Primary Graduation Date">
+                            <label  class="control-label" for="PrySchName">Name of School</label>
+                            <input class="form-control" type="text" name="SchoolName" id="PrySchName" placeholder="" data-toggle="tooltip" title="" data-original-title="Name of Primary School">
+                            <label class="control-label" for="Prylocatn">Location</label>
+                            <input type="text" class="form-control" name="PryLocation" id="Prylocatn" placeholder="" data-toggle="tooltip" title="" data-original-title="Primary School Location">
+                        </div>
+                        <div>
+                            <h3 class="qlfr"><span>Secondary</span></h3>
+                            <label class="control-label" for="SecEdu">Course Completed</label>
+                                <input type="text" class="form-control" name="Secondary" id="SecEdu" placeholder="" data-toggle="tooltip" title="" data-original-title="Secondary Course Completed">
+                            <label class="control-label" for="DateGradSec">Date Graduated(MM/DD/YY)</label>
+                            <input type="text" class="form-control" name="Secondary" id="DateGradSec" placeholder="" data-toggle="tooltip" title="" data-original-title="Secondary Graduation Date">
+                            <label class="control-label" for="SchNameSec">Name of School</label>
+                            <input type="text" class="form-control" name="SchoolNameSec" id="SchNameSec" placeholder="" data-toggle="tooltip" title="" data-original-title="Name of Secondary School">
+                            <label class="control-label" for="locatnSec">Location</label>
+                            <input type="text" class="form-control"  name="LocationSec" id="locatnSec" placeholder="" data-toggle="tooltip" title="" data-original-title="Secondary School Location">
+                        </div>
+                        <div>
+                            <h3 class="qlfr"><span>Bachelor's Degree</span></h3>
+                            <label class="control-label" for="BscEdu">Course Completed</label>
+                                <input type="text" class="form-control" name="Secondary" id="BscEdu" placeholder="" data-toggle="tooltip" title="" data-original-title="Bachelor course completed">
+                            <label class="control-label" for="DateGradBsc">Date Graduated(MM/DD/YY)</label>
+                                <input type="text" class="form-control" name="Secondary" id="DateGradBsc" placeholder="" data-toggle="tooltip" title="" data-original-title="Bachelor's Degree Graduation Date">
+                            <label class="control-label" for="SchNameBsc">Name of School</label>
+                                <input type="text" class="form-control" name="SchoolNameBsc" id="SchNameBsc" placeholder="" data-toggle="tooltip" title="" data-original-title="Name of Tertiary School">
+                            <label class="control-label" for="locatnBsc">Location</label>
+                                <input type="text" class="form-control"  name="LocationBsc" id="locatnBsc" placeholder="" data-toggle="tooltip" title="" data-original-title="University Location">
+                        </div> 
+                         <div>
+                            <h3 class="qlfr"><span>Graduate Degree</span></h3>
+                            <label class="control-label" for="MstEdu">Course Completed</label>
+                            <input type="text" class="form-control" name="Masters" id="MstEdu" placeholder="" data-toggle="tooltip" title="" data-original-title="B.Sc Course Completed">
+                            
+                            <label class="control-label" for="DateGradMst">Date Graduated(MM/DD/YY)</label>
+                            <input type="text" class="form-control" name="MstGrad" id="DateGradMst" placeholder="" data-toggle="tooltip" title="" data-original-title="Master's Degree Graduation Date">
+                            
+                            <label class="control-label" for="SchNameMst">Name of School</label>
+                            <input type="text" class="form-control" name="SchoolNameMst" id="SchNameMst" placeholder="" data-toggle="tooltip" title="" data-original-title="Name of Post-Graduate School">
+                            
+                            <label class="control-label" for="locatnMst">Location</label>
+                            <input type="text" class="form-control"  name="LocationMst" id="locatnMst" placeholder="" data-toggle="tooltip" title="" data-original-title="Post-Graduate School Location">
+                        </div> 
+                        <button type="button" onclick="previous_stepOne()" class="btn btn-primary btn-lg glyphicon glyphicon-chevron-left btnl_left" data-toggle="tooltip" title="" data-original-title="Previous-Step II"></button>
+                        <button type="button" id="btnl_stepThree" onclick="next_stepThree()" class="btn btn-primary btn-lg glyphicon glyphicon-chevron-right btnl_right" data-toggle="tooltip" title="" data-original-title="Next-Step III"></button>
+                        <button type="button" onclick="save_StepTwo()" class="btn btn-primary btn-lg btnl_center" data-toggle="tooltip" title="" data-original-title="Save">Save and Continue Later</button>
+                        
+                    </div>
+                    <div class="regFormSteps" id="stepThree">
+                        <h2>PART III-PREVIOUS EMPLOYMENT(S)</h2>
+                        <label class="control-label" for ="CoyofEmpOne"><span>1. </span>Name of Company/Employer</label>
+                        <input type="text" class="form-control" id="CoyofEmpOne" data-toggle="tooltip" title="" data-original-title="Name of first Company/Employer">
+                                
+                        <label class="control-label" for="AddofEmpOne">Address</label>
+                        <textarea  class="form-control" rows="2" cols="20" id="AddofEmpOne" data-toggle="tooltip" title="" data-original-title="Address of first Company/Employer"></textarea>
+                               
+                        <label class="control-label" for="YearofEmpOne">Year of Employment</label>
+                        <input type="number" class="form-control" name="EmpYrOne" id="YearofEmpOne" data-toggle="tooltip" title="" data-original-title="Year of first employment">
+                                
+                        <label class="control-label" for="RsnforSepOne">Reason for Separation</label>
+                        <textarea id="RsnforSepOne" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Reason for Separation from first employment"></textarea>
+                        
+                        <label class="control-label" for ="CoyofEmpTwo"><span>2. </span>Name of Company/Employer</label>
+                        <input type="text" class="form-control" id="CoyofEmpTwo" data-toggle="tooltip" title="" data-original-title="Name of second company/employer">
+                                
+                        <label class="control-label" for="AddofEmpTwo">Address</label>
+                        <textarea  class="form-control" rows="2" cols="20" id="AddofEmpTwo" data-toggle="tooltip" title="" data-original-title="Address of second Company/Employer"></textarea>
+                               
+                        <label class="control-label" for="YearofEmpTwo">Year of Employment</label>
+                        <input type="number" class="form-control" name="EmpYrTwo" id="YearofEmpTwo" data-toggle="tooltip" title="" data-original-title="Year of second employment">
+                                
+                        <label class="control-label" for="RsnforSepTwo">Reason for Separation</label>
+                        <textarea id="RsnforSepTwo" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Reason for Separation from second employment"></textarea>
+                        
+                        <label class="control-label" for ="CoyofEmpThree"><span>3. </span>Name of Company/Employer</label>
+                        <input type="text" class="form-control" id="CoyofEmpThree" data-toggle="tooltip" title="" data-original-title="Name of third Company/Employer">
+                                
+                        <label class="control-label" for="AddofEmpThree">Address</label>
+                        <textarea  class="form-control" rows="2" cols="20" id="AddofEmpThree" data-toggle="tooltip" title="" data-original-title="Address of third Company/Employer"></textarea>
+                               
+                        <label class="control-label" for="YearofEmpThree">Year of Employment</label>
+                        <input type="number" class="form-control" name="EmpYrThree" id="YearofEmpThree" data-toggle="tooltip" title="" data-original-title="Year of third employment">
+                                
+                        <label class="control-label" for="RsnforSepThree">Reason for Separation</label>
+                        <textarea id="RsnforSepThree" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Reason for Separation from third employment"></textarea>
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-chevron-left btnl_left" type="button" onclick="previous_stepTwo()" data-toggle="tooltip" title="" data-original-title="Previous-Step III"></button>
+                        <button  class="btn btn-primary btn-lg glyphicon glyphicon-chevron-right btnl_right" type="button" onclick="next_stepFour()" data-toggle="tooltip" title="" data-original-title="Next-Step IV"></button>
+                        <button type="button" onclick="save_StepThree()" class="btn btn-primary btn-lg btnl_center" data-toggle="tooltip" title="" data-original-title="Save">Save and Continue Later</button>
+                    </div>
+                    <div class="regFormSteps" id="stepFour">
+                        <h2> STEP IV-CHARACTER REFERENCE</h2>
+                        <label class="control-label" for ="RefOneName"><span>1. </span>Name</label>
+                        <input type="text" class="form-control" id="RefOneName" data-toggle="tooltip" title="" data-original-title="Name of first character reference">
+                                
+                        <label class="control-label" for="RefOneAdd">Address</label>
+                        <textarea id="RefOneAdd" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Address of first character reference"></textarea>
+                                
+                        <label class="control-label" for="RefOneContact">Contact Number</label>
+                        <input id="RefOneContact" type="text" class="form-control" data-toggle="tooltip" title="" data-original-title="Contact number of first character reference">
+                        
+                        <label class="control-label" for ="RefTwoName"><span>2. </span>Name</label>
+                        <input type="text" class="form-control" id="RefTwoName" data-toggle="tooltip" title="" data-original-title="Name of second character reference">
+                                
+                        <label class="control-label" for="RefTwoAdd">Address</label>
+                        <textarea id="RefTwoAdd" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Address of second character reference"></textarea>
+                                
+                        <label class="control-label" for="RefTwoContact">Contact Number</label>
+                        <input id="RefTwoContact" type="text" class="form-control" data-toggle="tooltip" title="" data-original-title="Contact number of second character reference">
+                        
+                        <label class="control-label" for ="RefThreeName"><span>3. </span>Name</label>
+                        <input type="text" class="form-control" id="RefThreeName" data-toggle="tooltip" title="" data-original-title="Name of third character reference">
+                                
+                        <label class="control-label" for="RefThreeAdd">Address</label>
+                        <textarea id="RefThreeAdd" class="form-control" rows="2" cols="20" data-toggle="tooltip" title="" data-original-title="Address of third character reference"></textarea>
+                                
+                        <label class="control-label" for="RefThreeContact">Contact Number</label>
+                        <input id="RefThreeContact" type="text" class="form-control" data-toggle="tooltip" title="" data-original-title="Contact number of third character reference">
+                        
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-chevron-left btnl_left" type="button" onclick="previous_stepThree()"></button>
+                        <button  class="btn btn-primary btn-lg glyphicon glyphicon-chevron-right btnl_right" type="button" onclick="next_stepFive()"></button>
+                        <button type="button" onclick="save_StepFour()" class="btn btn-primary btn-lg btnl_center" data-toggle="tooltip" title="" data-original-title="Save" value>Save and Continue Later</button>
+                    </div>
+                    <div class="regFormSteps" id="stepFive">
+                    <input type="Checkbox" value="yes" id="InfoConfirmation">I HEREBY certify that the information and/or statement 
+                            in this application are all true and correct, and I am fully aware that any false information or 
+                            statement provided by me in this application shall render me liable for criminal prosecution.
+                    <button  class="btn btn-primary btn-lg glyphicon glyphicon-chevron-left btnl_left" type="button" onclick="previous_stepFour()"></button>
+                    <button  type="submit" class="btn btn-primary btn-lg btnl_right" onclick="submit()">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

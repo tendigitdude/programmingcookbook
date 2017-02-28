@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2017, 3:11:34 PM
+    Author     : Immanuel
+*/
+#MainBody {
+    margin-top:                     3.5%;
+}
+#MainBody #DivContent {
+    margin-top:                     1.5%;
+}
+#MainBody #NavGuide h3 {
+   font-weight:                        bold;
+    font-family:                         cambria;
+    color:                              #13683B;
+    font-size:                          55%;
+    margin:                        1% auto;
+}
+#MainBody #NavGuide h4 {
+    font-family:                    cambria;
+    font-weight:                    bold;
+    font-size:                      50%;
+}
+h2 {
+    text-align:                         center;
+    font-size:                          160%;
+    font-weight:                        bold;
+    font-family:                        "Times New Roman",vivaldi,cursive,calibri, serif;
+    color:                              #13683B;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus{
+    border-color:                             #9DF4C7; 
+    margin-top:                               -10px;
+}
+label {
+    color:                              #0B6436; 
+    font-family:                        georgia;
+    margin-top:                         10px;
+}
+
+span {
+    background:                             url('Images/star1.gif') no-repeat left center;
+    padding-left:                           40px;
+}
+.regFormSteps {
+    display:                    none;
+    border:                         1px solid #ddd;
+    border-radius:              5px;
+    padding:                    10px;
+}
+#stepOne {
+    display:                    block;
+    padding:                     5px;
+    }
+#NavGuide #NavGuide_StepOne, #NavGuide #NavGuide_StepTwo, #NavGuide #NavGuide_StepThree, #NavGuide #NavGuide_StepFour, #NavGuide #NavGuide_StepFive {
+    background:           url("Images/Arrow1.gif") no-repeat;
+/*    background-color:           #00ff00;*/
+    height:                     70px;
+    width:                     310px;
+    margin:                     20px auto;
+    padding:                    10px;
+    font-family:                serif;
+    font-weight:                bold;
+    font-size:                  230%;
+}
+#NavGuide #NavGuide_StepOne:hover, #NavGuide #NavGuide_StepTwo:hover, #NavGuide #NavGuide_StepThree:hover, #NavGuide #NavGuide_StepFour:hover, #NavGuide #NavGuide_StepFive:hover {
+   background-color:            #99FDBD;           
+}
+
+
+#NavGuide #NavGuide_StepOne {
+    background-color:           #14833D;
+}
+button {
+    margin-top:                             6%; 
+    width:                                  15%;
+    background-color:                      #17720D; 
+    transition:                 font-size 5s ease-in-out 0ms;
+}
+.btnl_right {
+    float:                      right;
+}
+.btnl_left {
+    float:                      left;
+}
+.btnl_center, .btnl_modal {
+    text-align:                 center;
+    width:                      29%;
+    margin:                     3%  33%;
+    white-space:                normal; 
+    background-color:           #58A750;
+
+}
+.btnl_left, .btnl_right, .btnl_center {
+    background-color:           #13A55A;    
+}
+.btnl_left:hover, .btnl_right:hover, .btnl_center:hover{
+    background-color:           rgba(17,85,10,.7);
+font-size:                      160%;
+    
+}
+.btnl_left:click, .btnl_right:click, .btnl_center:click {
+    background-color:           #17C66B;
+}
+.glyphicon {
+    text-align:                 center;
+    font-size:                  180%;
+}
+
+/*h3:nth-of-type(1n+1) {
+    margin-top:                  6%;
+    font-weight:                 bold;
+    }*/
+/*This is yet to work*/
+#stepTwo div h3:nth-of-type(2n+1) {
+    margin-top:                 15%;
+}
+/*#stepTwo h3{
+    font-family:                georgia;               
+    font-size:                  120%;
+    margin-top:                 40px;
+}*/
+
+
+
